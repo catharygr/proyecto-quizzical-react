@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+.flow > :where(:not(:first-child)) {
+    margin-top: var(--flow-espacio, 1rem);
+}
+
+.inicio  {
+text-align: center;
+}
+
+.inicio h1 {
+  font-size: 6rem;
+  text-decoration: underline;
+}
+
+.inicio p {
+  font-size: 2rem;
+}
+
+.inicio--btn {
+  --flow-espacio: 3rem;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background-color: rebeccapurple;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
