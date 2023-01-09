@@ -1,15 +1,25 @@
 import React from 'react'
+import Pregunta from './Pregunta'
 
-export default function Quiz() {
+export default function Quiz(props) {
 
-  const [data, setdata] = React.useState(() => {})
+  
+  const preguntas = props.data.results.map(pregunta => {
+    const respuesta = []
+    respuesta.push(pregunta.correct_answer)
+    pregunta.incorrect_answers.forEach(resp => respuesta.push(resp))
+    console.log(respuesta)
+    return (
+      <Pregunta 
+      pregunta={pregunta.question}
+      />
+    )
+  } )
 
-  React.useEffect(function() {
-    fetch(' https://opentdb.com/api.php?amount=5')
-      .then(res => res.json())
-      .then(data => console.log(data))
-  },[])
+
   return (
-    <h1>Quiz</h1>
+    <div>
+   {preguntas}
+    </div>
   )
-}
+} 
