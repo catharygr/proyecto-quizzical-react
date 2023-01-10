@@ -1,8 +1,15 @@
 import React from 'react' 
 
-export default function Pregunta(props) {
+export default function Pregunta({pregunta, respuestas}) {
+  const radios = respuestas.map(resp => <p key={resp}>{resp}</p> )
 
   return (
-    <p>{props.pregunta}</p>
+    <div className='pregunta'>
+    <h3>{pregunta}</h3>
+    <div className='pregunta--respuestas'>
+    {radios}
+    </div>
+    </div>
+
   )
 }

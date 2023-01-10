@@ -42,6 +42,16 @@ text-align: center;
   cursor: pointer;
 }
 
+.pregunta {
+  padding: 1rem;
+}
+
+.pregunta--respuestas {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 
 
 

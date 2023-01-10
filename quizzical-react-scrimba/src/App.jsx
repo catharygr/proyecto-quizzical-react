@@ -10,7 +10,7 @@ function App() {
   const [data, setdata] = React.useState({})
 
   React.useEffect(function() {
-    fetch(' https://opentdb.com/api.php?amount=5')
+    fetch('https://opentdb.com/api.php?amount=5')
       .then(res => res.json())
       .then(data => setdata(oldData => oldData = {...data} ))
   },[])
