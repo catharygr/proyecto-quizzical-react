@@ -2,7 +2,9 @@ import React from 'react'
 import Pregunta from './Pregunta'
 
 export default function Quiz(props) {
+    const [preguntaActuales,setPreguntaActuales] = React.useState(props.data.results)
 
+  
   
   const preguntas = props.data.results.map(pregunta => {
 
@@ -32,6 +34,7 @@ export default function Quiz(props) {
       key={pregunta.question}
       pregunta={pregunta.question}
       respuestas={respuestas}
+      respCorrecta={pregunta.correct_answer}
       />
     )
   } )
